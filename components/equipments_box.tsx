@@ -5,9 +5,9 @@ import React from "react";
 
 const Equipments_Box = ({item}: {item: GridItemInterface}) => {
   return (
-    <div className="flex flex-col  jusify-end w-full h-full">
+    <div className="flex flex-col items-end jusify-end w-full h-full rounded-3xl overflow-hidden">
       {/* overlay */}
-      <div className="absolute inset-0 z-10">
+      <div className="absolute h-full flex items-end">
         {/* Background image */}
         <Image
           className="object-cover object-center"
@@ -18,7 +18,9 @@ const Equipments_Box = ({item}: {item: GridItemInterface}) => {
         {/* content container */}
         <div className="relative z-20 p-8">
           {/* title */}
-          <div className="text-sm  font-medium text-white">{item.title}</div>
+          <div className="text-lg  font-medium text-white mb-3">
+            {item.title}
+          </div>
           {/* items */}
           <div className="flex flex-wrap items-center gap-3">
             {item.equipments?.map((eq) => (

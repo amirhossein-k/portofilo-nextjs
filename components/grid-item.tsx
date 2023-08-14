@@ -6,11 +6,11 @@ const variants = cva(
   {
     variants: {
       size: {
-        "1x1": "col-span-1 row-span-1 p-8",
-        "1x2": "col-span-1 row-span-2 p-8",
-        "2x1": "col-span-2 row-span-1 px-8 py-4",
-        "2x2": "col-span-2 row-span-2 p-8",
-        "2x4": "col-span-2 row-span-4 relative overflow-hidden",
+        "1x1": "col-span-2 row-span-1 p-8",
+        "1x2": "col-span-2  row-span-2 p-8",
+        "2x1": "col-span-2  row-span-1 px-8 py-4",
+        "2x2": "col-span-1  row-span-2 p-8",
+        "2x4": "col-span-2  row-span-4 relative overflow-hidden",
       },
     },
     defaultVariants: {
