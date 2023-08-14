@@ -1,3 +1,5 @@
+import {css} from "glamor";
+
 const Button = ({
   text,
   secondaryText,
@@ -7,10 +9,19 @@ const Button = ({
   secondaryText?: string;
   color?: string;
 }) => {
+  var d = color.slice(0, -2);
+  console.log(d);
+  let rule = css({
+    backgroundColor: color,
+    ":hover": {
+      backgroundColor: color.slice(0, -4) + "65",
+    },
+  });
+
   return (
     <div
-      style={{backgroundColor: color}}
-      className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white rounded-lg max-w-fit"
+      // style={{backgroundColor: color}}
+      className={`flex items-center gap-2 px-3 py-2 text-sm font-medium text-white rounded-lg max-w-fit ${rule} `}
     >
       <span>{text}</span>
       {secondaryText && (

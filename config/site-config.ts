@@ -62,7 +62,7 @@ const GridItems: GridItemInterface[] = [
     buttonTitle: "ارتباط در تلگرام",
     buttonLink: "https://t.me/amirhossein_kkk",
     buttonSecondaryText: "44",
-    color: "#5865F2",
+    color: "#0369A1",
   },
   {
     layout: "2x4",
@@ -98,7 +98,7 @@ const GridItems: GridItemInterface[] = [
     type: "mentor",
     title: "product 1",
     icon: "youtube",
-    color: "red",
+    color: "#FF0000",
     // promotion: "MAKRDEVFELLOWS",
     description: "describe product 1",
     buttonTitle: "product one",
