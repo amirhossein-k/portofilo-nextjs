@@ -25,7 +25,7 @@ type GridItemProps = {children: React.ReactNode} & VariantProps<
 
 const GridItem = ({size, children}: GridItemProps) => {
   return (
-    <div className={cn(variants({size, className: "bg-emerald-100"}))}>
+    <div className={cn(variants({size, className: "bg-slate-200"}))}>
       {children}
     </div>
   );
