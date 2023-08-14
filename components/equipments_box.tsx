@@ -27,8 +27,11 @@ const Equipments_Box = ({item}: {item: GridItemInterface}) => {
           </div>
           {/* items */}
           <div className="flex flex-wrap items-center gap-3">
-            {item.equipments?.map((eq) => (
-              <span className="dark:bg-neutral-800 rounded-lg text-sm bg-white px-2 py-1 font-medium">
+            {item.equipments?.map((eq, index) => (
+              <span
+                key={eq.title + index}
+                className="dark:bg-neutral-800 rounded-lg text-sm bg-white px-2 py-1 font-medium"
+              >
                 {eq.title}
               </span>
             ))}
