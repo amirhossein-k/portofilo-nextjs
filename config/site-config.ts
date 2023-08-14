@@ -109,7 +109,7 @@ const GridItems: GridItemInterface[] = [
 export const siteConfig = {
   creator: "Amir Hossein Karimi",
   title: "Develepor",
-  bio: "فول استک کار",
+  bio: "امیرحسین کریمی هستم نزدیک به 3 سال در حوزه برنامه نویسی تحت وب فعالیت دارم",
   location: "Tehran, Iran",
   location_link:
     "https://www.google.com/maps/place/Tehran,+Tehran+Province,+Iran/@35.706891,50.6882744,9z/data=!3m1!4b1!4m6!3m5!1s0x3f8e00491ff3dcd9:0xf0b3697c567024bc!8m2!3d35.7218583!4d51.3346954!16zL20vMGZ0bHg?entry=ttu",

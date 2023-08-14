@@ -11,7 +11,7 @@ const MentroshipBox = ({item}: {item: GridItemInterface}) => {
       {/* icon */}
       {item.icon && <Icon type={item.icon ?? ""} color={item.color} />}
       {/* title */}
-      <div className="w-full lg:text-lg text-lg font-semibold">
+      <div className="w-full text-base @md:text-lg  font-semibold">
         {item.title}
       </div>
       {/* container */}

@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const LeftSide = () => {
   return (
-    <div className="flex-1 h-full w-full pt-8 px-8 xl:p-8  xl:max-w-md">
+    <div className=" xl:h-full w-full pt-8  xl:p-8  xl:max-w-md">
       <div className="flex flex-col w-full   rounded-md  h-full space-y-6">
         {/* avatar */}
 
