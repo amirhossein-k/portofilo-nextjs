@@ -5,7 +5,10 @@ import React from "react";
 
 const Equipments_Box = ({item}: {item: GridItemInterface}) => {
   return (
-    <div className="flex flex-col items-end jusify-end w-full h-full rounded-3xl overflow-hidden">
+    <div
+      className="flex flex-col items-end jusify-end w-full h-full rounded-3xl overflow-hidden"
+      key={item.title}
+    >
       {/* overlay */}
       <div className="absolute h-full flex items-end">
         {/* Background image */}
@@ -14,6 +17,7 @@ const Equipments_Box = ({item}: {item: GridItemInterface}) => {
           fill
           src={item.image ?? ""}
           alt=""
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {/* content container */}
         <div className="relative z-20 p-8">
