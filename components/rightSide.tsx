@@ -35,7 +35,7 @@ const RightSide = () => {
       {/* grid container*/}
       <div
         ref={scope}
-        className="w-full md:h-full xl:overflow-y-auto p-6 grid gird-cols-2 md:grid-cols-4 auto-rows-[70px] gap-10"
+        className="w-full md:h-full xl:overflow-y-auto p-6 grid gird-cols-2  md:grid-cols-4 auto-rows-[70px] gap-10 "
       >
         {/* grid items */}
         {siteConfig.items.map((item, index) => {

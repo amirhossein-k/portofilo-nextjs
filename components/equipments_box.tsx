@@ -6,14 +6,14 @@ import React from "react";
 const Equipments_Box = ({item}: {item: GridItemInterface}) => {
   return (
     <div
-      className="flex flex-col items-end jusify-end w-full h-full rounded-3xl overflow-hidden"
+      className="flex flex-col items-end jusify-end w-full h-full rounded-3xl overflow-hidden "
       key={item.title}
     >
       {/* overlay */}
-      <div className="absolute h-full flex items-end">
+      <div className="absolute h-full flex items-end ">
         {/* Background image */}
         <Image
-          className="object-cover object-center"
+          className="object-cover object-center "
           fill
           src={item.image ?? ""}
           alt=""
@@ -22,7 +22,7 @@ const Equipments_Box = ({item}: {item: GridItemInterface}) => {
         {/* content container */}
         <div className="relative z-20 p-8">
           {/* title */}
-          <div className="text-lg  font-medium text-white mb-3">
+          <div className="text-lg  font-medium text-white mb-3 ">
             {item.title}
           </div>
           {/* items */}
@@ -30,7 +30,7 @@ const Equipments_Box = ({item}: {item: GridItemInterface}) => {
             {item.equipments?.map((eq, index) => (
               <span
                 key={eq.title + index}
-                className="dark:bg-neutral-800 rounded-lg text-sm bg-white px-2 py-1 font-medium"
+                className="dark:bg-neutral-800 rounded-lg text-sm bg-white px-2 py-1 font-medium "
               >
                 {eq.title}
               </span>

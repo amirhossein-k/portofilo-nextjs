@@ -10,7 +10,7 @@ const Button = ({
   color?: string;
 }) => {
   var d = color.slice(0, -2);
-  console.log(d);
+
   let rule = css({
     backgroundColor: color,
     ":hover": {

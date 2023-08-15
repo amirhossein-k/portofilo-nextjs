@@ -18,6 +18,16 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sfpro)"],
       },
+      backgroundImage: {
+        "light-pattern": "url('/images/light-pattern.svg')",
+        "dark-pattern": "url('/images/dark-pattern.svg')",
+      },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        verySmall: "0.2rem",
+      },
     },
   },
   plugins: [require("@tailwindcss/container-queries")],

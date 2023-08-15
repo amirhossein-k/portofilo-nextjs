@@ -10,9 +10,10 @@ const LeftSide = () => {
         {/* avatar */}
 
         <Image
-          src="/images/avatar.png"
+          src="/images/me.jpg"
           width={120}
           height={120}
+          className="rounded-[50%]"
           alt="Avatar"
           priority
           loading="eager"
@@ -32,9 +33,9 @@ const LeftSide = () => {
           </p>
         </div>
         {/* buttons */}
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex items-center justify-between gap-6 ">
           <a
-            className="flex items-center justify-center gap-2 border border-neutral-200 w-full px-2 py-1 rounded-md dark:border-neutral-800"
+            className="flex items-center justify-center gap-2 border border-neutral-200 w-full px-2 py-1 rounded-md dark:border-neutral-800 hover:bg-[#91AEC1]"
             href={siteConfig.location_link}
           >
             <Image
@@ -47,7 +48,7 @@ const LeftSide = () => {
             {siteConfig.location}
           </a>
           <a
-            className="flex items-center justify-center border gap-2 border-neutral-200 w-full px-2 py-1 rounded-md dark:border-neutral-800"
+            className="flex items-center justify-center border gap-2 border-neutral-200 w-full px-2 py-1 rounded-md dark:border-neutral-800 hover:bg-[#91AEC1]"
             href={siteConfig.phone_link}
           >
             <Image

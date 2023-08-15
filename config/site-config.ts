@@ -35,7 +35,7 @@ const GridItems: GridItemInterface[] = [
     icon: "github",
     username: "@amirhossein-k",
 
-    buttonSecondaryText: "36",
+    // buttonSecondaryText: "36",
     buttonTitle: "Follow",
     buttonLink: "https://github.com/amirhossein-k",
     color: "#070707",
@@ -49,7 +49,7 @@ const GridItems: GridItemInterface[] = [
     username: "989391470427",
     buttonTitle: "ارتباط در واتس اپ",
     buttonLink: "https://wa.me/989391470427",
-    buttonSecondaryText: "279",
+    // buttonSecondaryText: "279",
     color: "#0EC00C",
     description: "برای ارتباط به واتس اپ پیام دهید",
   },
@@ -61,14 +61,14 @@ const GridItems: GridItemInterface[] = [
     username: "@amirhossein_kkk",
     buttonTitle: "ارتباط در تلگرام",
     buttonLink: "https://t.me/amirhossein_kkk",
-    buttonSecondaryText: "44",
+    // buttonSecondaryText: "44",
     color: "#0369A1",
   },
   {
     layout: "2x4",
     type: "equipment",
     title: "skills",
-    image: "/images/eupment.jpg",
+    image: "/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg",
     equipments: [
       {
         title: "Html",
