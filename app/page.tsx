@@ -1,10 +1,37 @@
+"use client";
 import Footer from "@/components/footer";
 import LeftSide from "@/components/leftSide";
 import RightSide from "@/components/rightSide";
+import GetGithubRep from "@/app/actions/getGithubRep";
+import {GetRepo} from "@/types";
+import {GridItemInterface, siteCon} from "@/config/site-config";
+import {useEffect, useState} from "react";
 
-const GridItems = new Array(64).fill(0);
-
+const fet = async () => {
+  const site: GridItemInterface[] | null = await siteCon();
+  if (fet !== undefined) return site;
+};
 export default function Home() {
+  const [repo, setRepo] = useState<GridItemInterface[]>();
+  useEffect(() => {
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const repo = siteCon();
+
+        resolve(repo);
+      }, 500);
+    });
+    myPromise
+
+      .then((repo: any) => {
+        setRepo(repo);
+      })
+
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+
   return (
     <main className="relative flex flex-col items-center flex-1 w-full h-full">
       <div className="absolute inset-0 z-0 bg-light-pattern dark:bg-dark-pattern bg-verySmall" />
@@ -13,7 +40,7 @@ export default function Home() {
         {/* Left Panel */}
         <LeftSide />
         {/* Right Panel */}
-        <RightSide />
+        {repo !== undefined && <RightSide item={repo} />}
         {/* Footer for Mobile */}
         <div className="flex pb-6 xl:hidden">
           <Footer />

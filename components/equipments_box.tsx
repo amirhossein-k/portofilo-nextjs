@@ -1,7 +1,7 @@
 import {GridItemInterface} from "@/config/site-config";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Equipments_Box = ({item}: {item: GridItemInterface}) => {
   return (

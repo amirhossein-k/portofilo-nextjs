@@ -1,13 +1,17 @@
 "use client";
 
-import sun from "../public/images/sun.svg";
 import sun2 from "../public/images/sun2.png";
 import moon from "../public/images/moon.svg";
 import {useTheme} from "next-themes";
 import Image from "next/image";
+import {useEffect} from "react";
 
 export function ThemeToggle() {
   const {theme, setTheme} = useTheme();
+
+  useEffect(() => {
+    setTheme("dark");
+  }, []);
 
   return (
     <button

@@ -1,3 +1,6 @@
+import GetGithubRep from "@/app/actions/getGithubRep";
+import {GetRepo, Repo} from "@/types";
+
 export type GridItemLayout = "1x1" | "1x2" | "2x1" | "2x2" | "2x4"; /// width x height
 export type GridItemType = "social" | "equipment" | "mentor" | "project";
 export type EquipmentsItem = {
@@ -25,9 +28,11 @@ export interface GridItemInterface {
   /* Equipments */
   equipments?: EquipmentsItem[];
   image?: string;
+  created_at?: string;
+  site?: string;
 }
 
-const GridItems: GridItemInterface[] = [
+let GridItems: GridItemInterface[] = [
   {
     layout: "1x2",
     type: "social",
@@ -64,6 +69,7 @@ const GridItems: GridItemInterface[] = [
     // buttonSecondaryText: "44",
     color: "#0369A1",
   },
+
   {
     layout: "2x4",
     type: "equipment",
@@ -89,22 +95,69 @@ const GridItems: GridItemInterface[] = [
         title: "Next js",
       },
       {
+        title: "Node js",
+      },
+      {
+        title: "Express js",
+      },
+      {
+        title: "MongoDB",
+      },
+      {
         title: "Sass , Bootstrap , Tailwind ",
       },
     ],
   },
-  {
-    layout: "2x1",
-    type: "mentor",
-    title: "product 1",
-    icon: "youtube",
-    color: "#FF0000",
-    // promotion: "MAKRDEVFELLOWS",
-    description: "describe product 1",
-    buttonTitle: "product one",
-    buttonLink: "https://superpeer.com/makrdev/-/supabase-mentor",
-  },
+  // {
+  //   layout: "2x1",
+  //   type: "mentor",
+  //   title: "product 1",
+  //   icon: "youtube",
+  //   color: "#FF0000",
+  //   // promotion: "MAKRDEVFELLOWS",
+  //   description: "describe product 1",
+  //   buttonTitle: "product one",
+  //   buttonLink: "https://superpeer.com/makrdev/-/supabase-mentor",
+  // },
 ];
+
+export const siteCon = async () => {
+  let repo = await GetGithubRep();
+  // console.log(repo);
+
+  if (repo) {
+    repo.map((item, index) => {
+      var color;
+      if (index % 2 == 0) {
+        color = "#0F86D4";
+      } else if (index % 3 == 0) {
+        color = "#27D70A";
+      } else if (index % 5 == 0) {
+        color = "#D5D70A";
+      } else if (index % 3 == 1) {
+        color = "#710fd4";
+      } else {
+        color = "#FF0000";
+      }
+      let r: GridItemInterface = {
+        layout: "2x1",
+        type: "mentor",
+        title: item.name,
+        icon: "youtube",
+        username: item.full_name,
+        buttonTitle: item.language,
+        buttonLink: item.html_url,
+        // buttonSecondaryText: "44",
+        color,
+        created_at: item.created_at,
+        site: item.homepage,
+      };
+      GridItems.push(r);
+    });
+    return GridItems;
+  }
+  return null;
+};
 
 export const siteConfig = {
   creator: "Amir Hossein Karimi",
@@ -119,36 +172,3 @@ export const siteConfig = {
 
   items: GridItems,
 } as const;
-
-// const GridItems2 = [
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-2",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-1 row-span-2",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-1 row-span-2",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-4",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-2",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-1",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-1",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-1",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-2",
-//   },
-//   {
-//     className: "rounded-md bg-emerald-100 col-span-2 row-span-1",
-//   },
-// ];
