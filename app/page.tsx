@@ -32,7 +32,6 @@ export default function Home() {
         console.error(err);
       });
   }, []);
-  console.log("main");
 
   return (
     <main className="relative flex flex-col items-center flex-1 w-full">

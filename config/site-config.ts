@@ -20,6 +20,7 @@ export interface GridItemInterface {
   buttonTitle?: string;
   buttonLink?: string;
   buttonSecondaryText?: string;
+
   /* Mentor */
   promotion?: string;
   price?: string;
@@ -31,6 +32,7 @@ export interface GridItemInterface {
   image?: string;
   created_at?: string;
   site?: string;
+  topics?: [];
 }
 
 let GridItems: GridItemInterface[] = [
@@ -133,7 +135,6 @@ interface itt {
 }
 export const siteCon = async () => {
   let repo: any = await GetGithubRep();
-  console.log(repo);
 
   toast.promise(GEttaost(), {
     pending: {
@@ -143,8 +144,6 @@ export const siteCon = async () => {
     },
     success: {
       render({data}: any) {
-        console.log(data);
-
         return "site load finish";
       },
     },
@@ -183,6 +182,7 @@ export const siteCon = async () => {
         color,
         created_at: item.created_at,
         site: item.homepage,
+        topics: item.topics,
       };
       GridItems.push(r);
     });
