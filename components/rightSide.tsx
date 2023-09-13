@@ -33,7 +33,7 @@ const RightSide = ({item}: {item: GridItemInterface[]}) => {
         }
       );
     }
-  }, [scope]);
+  }, []);
   return (
     <div className="flex-1 md:h-full">
       {/* grid container*/}
@@ -43,7 +43,7 @@ const RightSide = ({item}: {item: GridItemInterface[]}) => {
       >
         {/* grid items */}
 
-        {item.map((item, index) => {
+        {item?.map((item, index) => {
           return (
             <GridItem key={item.title + index} size={item.layout}>
               {item.type === "social" ? (

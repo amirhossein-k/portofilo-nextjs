@@ -77,6 +77,8 @@ export type GetRepo = {
   watchers: number;
   default_branch: string;
   type?: string;
+  stack?: string;
+  message?: string;
 };
 
 export interface Repo {

@@ -10,7 +10,7 @@ const LeftSide = () => {
         {/* avatar */}
 
         <Image
-          src="/images/me.jpg"
+          src="/images/me2.jpg"
           width={120}
           height={120}
           className="rounded-[50%]"
@@ -28,9 +28,10 @@ const LeftSide = () => {
           <h1 className="text-xl font-bold mt-2 ">{siteConfig.creator}</h1>
 
           {/* bio */}
-          <p className="text-xl text-neutral-500 font-light">
+          <p className="text-xl text-neutral-500 font-light border-b border-dotted">
             {siteConfig.bio}
           </p>
+          <p className="text-lg text-gray-400 font-light">{siteConfig.bioEn}</p>
         </div>
         {/* buttons */}
         <div className="flex items-center justify-between gap-6 ">
