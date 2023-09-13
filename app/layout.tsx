@@ -24,10 +24,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`h-full `} suppressHydrationWarning>
+    <html lang="en" className={`h-screen `} suppressHydrationWarning>
       <body className={` ${manrope.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col h-full">{children}</div>
+          {/* <div className="flex flex-col h-full">{children}</div> */}
+          {children}
         </ThemeProvider>
       </body>
     </html>

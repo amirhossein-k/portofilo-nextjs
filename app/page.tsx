@@ -35,7 +35,7 @@ export default function Home() {
   console.log("main");
 
   return (
-    <main className="relative flex flex-col items-center flex-1 w-full h-full">
+    <main className="relative flex flex-col items-center flex-1 w-full">
       <ToastContainer autoClose={2000} />
       <div className="absolute inset-0 z-0 bg-light-pattern dark:bg-dark-pattern bg-verySmall" />
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-white via-white/90 to-white dark:from-neutral-950 dark:via-neutral-950/90 dark:to-neutral-950" />
@@ -43,7 +43,7 @@ export default function Home() {
         {/* Left Panel */}
         <LeftSide />
         {/* Right Panel */}
-        <RightSide item={repo!} />
+        {repo !== undefined && <RightSide item={repo} />}
         {/* Footer for Mobile */}
         <div className="flex pb-6 xl:hidden">
           <Footer />
